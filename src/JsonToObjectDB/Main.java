@@ -14,11 +14,11 @@ import java.util.Iterator;
  *
  * @author josem
  */
-public class main {
+public class Main {
 
     public static void main(String[] args) {
 
-        main prog = new main();
+        Main prog = new Main();
 
         dameURLyTeDoyJSON js = new dameURLyTeDoyJSON("http://www.ferminvelez.es/PROGRAMACION/PRUEBAS/marcas.json");
 
