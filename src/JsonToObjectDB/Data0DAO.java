@@ -3,6 +3,7 @@
  */
 package JsonToObjectDB;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -147,6 +148,13 @@ public class Data0DAO {
     // crea el objeto sesion e inicia la transaction 
     private void iniciaOperacion() {
         try {
+            File fichero=new File("BaseDatos/marcas.odb");
+            if(fichero.exists()) { fichero.delete();
+            fichero=new File("BaseDatos/marcas.odb$");
+             fichero.delete();
+            }
+           
+            
             this.emf = Persistence.createEntityManagerFactory("BaseDatos/marcas.odb");
             this.em = emf.createEntityManager();
         } catch (Exception ex) {
